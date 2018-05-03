@@ -22,6 +22,57 @@ public class Curso implements Serializable {
     private Professor coordenador;
 
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(Integer cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    public String getTipoCurso() {
+        return tipoCurso;
+    }
+
+    public void setTipoCurso(String tipoCurso) {
+        this.tipoCurso = tipoCurso;
+    }
+
+    public Integer getTotalPeriodos() {
+        return totalPeriodos;
+    }
+
+    public void setTotalPeriodos(Integer totalPeriodos) {
+        this.totalPeriodos = totalPeriodos;
+    }
+
+    public Professor getCoordenador() {
+        return coordenador;
+    }
+
+    public void setCoordenador(Professor coordenador) {
+        this.coordenador = coordenador;
+    }
 
     public Curso() {
     }
