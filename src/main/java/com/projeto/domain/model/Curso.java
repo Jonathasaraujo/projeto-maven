@@ -11,7 +11,6 @@ import java.io.Serializable;
 @Entity
 public class Curso implements Serializable {
     private static final long serialVersionUID = 1L;
-    private final MySerializable serializable = new MySerializable();
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -22,23 +21,18 @@ public class Curso implements Serializable {
     @ManyToOne
     private Professor coordenador;
 
+
+
     public Curso() {
     }
 
-    public Curso(String nome, Integer cargaHoraria, String tipoCurso,
-                 Integer totalPeriodos, Professor coordenador) {
-        this.setCargaHoraria(cargaHoraria)
-                .setCoordenador(coordenador)
-                .setId(id)
-                .setNome(nome)
-                .setTipoCurso(tipoCurso)
-                .setTotalPeriodos(totalPeriodos);
-    }
+    public Curso(Long id, String nome, Integer cargaHoraria, String tipoCurso, Integer totalPeriodos, Professor coordenador) {
 
-    public Serializable getSerializable() {
-        return serializable;
-    }
-
-    private class MySerializable implements Serializable {
+        this.id = id;
+        this.nome = nome;
+        this.cargaHoraria = cargaHoraria;
+        this.tipoCurso = tipoCurso;
+        this.totalPeriodos = totalPeriodos;
+        this.coordenador = coordenador;
     }
 }
